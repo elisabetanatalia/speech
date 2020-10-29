@@ -21,9 +21,9 @@ function onend()
 recognition.onend = onend;
 recognition.onsoundend = onend;
 recognition.onspeechend = onend;
-recognition.onresult = on_result;
+recognition.onresult = on_results;
 
-function on_result(e)
+function on_results(e)
 {
-	document.getElementById("text").innerHTML += "Ati rostit cuvantul: "+   e.result[0][0].transcript + ", accuratete: " +e.result[0][0].confidence + "<br>"
+	document.getElementById("text").innerHTML += "Ati rostit cuvantul: "+   e.results[0][0].transcript + ", accuratete: " +e.results[0][0].confidence + "<br>"
 }
